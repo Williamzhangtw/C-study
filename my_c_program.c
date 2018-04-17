@@ -1,18 +1,30 @@
 #include <stdio.h>
-
+#include <limits.h>
 int main()
 {
-  char letter = 0;
+  int a = 0;
+  int b = 0;
 
-  printf("hello, this program is used to translate lower case into upper case\n");
+  printf("hello, this program is used to test arithmetic\n");
+  printf("int max = %i", INT_MAX);
+  printf("please input int number a\n");
   
-  printf("please input a charcter\n");
+  scanf("%i",&a);
+  printf("please input int number b\n");
+  scanf("%i",&b);
   
-  scanf("%c",&letter);
-  if ((letter>='a')&&(letter<='z'))
+  if (b==0)
+    {
+      printf("b can't be 0\n");
+      return 0;
+    }
   
-  printf("the answer is %c\n",letter-'a'+'A');
-  else
-    printf("the input invalid\n");
+  printf("a + b = %i\n",a+b);
+  printf("a - b = %i\n",a-b);
+  printf("a/(float)b = %.2f\n",a/(float)b);
+  printf("a%%b = %i\n",a%b);
+  
+
+
   return 0;
 }

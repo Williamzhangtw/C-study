@@ -1,16 +1,18 @@
 #include <stdio.h>
-//this program to use to calculate the "Length of a circle"
-// "Length of a circle = 2 * PI * radius
-#define PI 3.14159261234567890123456789
+
 int main()
 {
-  float radius = 0;
+  char letter = 0;
 
-  printf("hello, this program is used to calculate the \"length of the circle\"\n");
+  printf("hello, this program is used to translate lower case into upper case\n");
   
-  printf("please input radius\n");
-  scanf("%f",&radius);
-  printf("the answer is %.20f\n",radius*PI*2);
-
+  printf("please input a charcter\n");
+  
+  scanf("%c",&letter);
+  if ((letter>='a')&&(letter<='z'))
+  
+  printf("the answer is %c\n",letter-'a'+'A');
+  else
+    printf("the input invalid\n");
   return 0;
 }

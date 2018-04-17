@@ -2,30 +2,19 @@
 
 int main()
 {
-  int a = 0;
-  int b = 0;
+  long double radius = 0.0L;
+  long double height = 0.0L;
+  const long double pi = 3.1415926353890L;
+  printf("hello, this program is used to calculate cylinder volume\n");
 
-  printf("hello, this program is used to test bitwise\n");
-
-  printf("please input int number a\n");
+  printf("please input long double radius\n");
   
-  scanf("%i",&a);
-  printf("please input int number b\n");
-  scanf("%i",&b);
+  scanf("%Lf",&radius);
+  printf("please input long double height\n");
+  scanf("%Lf",&height);
   
-  printf("a & b = %x\n",a&b);
+  printf("Volume = pi*radius*radius*height = %.12Lf\n",pi*radius*radius*height);
 
-  printf("a | b = %x\n",a|b);
-
-  printf("a ^ b = %x\n",a^b);
-
-  printf("********\n");
-  printf("this is for right/left bit shif\n");
-  printf("please input two numbers, seperate by space\n");
-
-  scanf("%i %i",&a,&b);
-  printf("a << b = %x\n",a<<b);
-  printf("a >> b = %x\n",a>>b);
   
   return 0;
 }

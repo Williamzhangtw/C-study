@@ -5,6 +5,7 @@ void Select_Your_Choice(){
   printf("please select your function\n");
   printf("1)add\n");
   printf("2)multiply\n");
+  printf("3)power\n");
   printf("q)quit\n");
 }
 
@@ -26,6 +27,22 @@ void Multiply(){
   printf("a*b = %i\n",a*b);
 }
 
+void Power(){
+  double a;
+  unsigned int b;
+  printf("please input real number\n");
+
+  scanf("%lf",&a);
+  printf("please input power b\n");
+  scanf("%ui",&b);
+  double answer;
+  for(answer = a; b>1;b--)
+    {
+      answer = answer * a;
+    }
+  printf("a^b =%.3lf\n",answer);
+} 
+
 int main(){
 
   printf("hello, this program is used to select functions\n");
@@ -41,6 +58,9 @@ int main(){
       break;
     case '2':
       Multiply();
+      break;
+    case '3':
+      Power();
       break;
     case 'q':
       return 0;

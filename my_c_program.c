@@ -2,19 +2,28 @@
 
 int main()
 {
-  long double radius = 0.0L;
-  long double height = 0.0L;
-  const long double pi = 3.1415926353890L;
-  printf("hello, this program is used to calculate cylinder volume\n");
 
-  printf("please input long double radius\n");
-  
-  scanf("%Lf",&radius);
-  printf("please input long double height\n");
-  scanf("%Lf",&height);
-  
-  printf("Volume = pi*radius*radius*height = %.12Lf\n",pi*radius*radius*height);
+  printf("hello, this program is used to test how positive or negative the integer numbers are\n");
 
+  int integer = 0;
+  
+  scanf("%i",&integer);
+
+  if(integer > 999){
+    printf("%i is highly positive\n",integer);
+  }
+  else if((integer<=999)&&(integer>100))
+    printf("%i is very positive\n",integer);
+  else if((integer>0)&&(integer<=100))
+    printf("%i is positive\n",integer);
+  else if(integer==0)
+    printf("integer is 0\n");
+  else if((integer>=-100)&&(integer<0))
+    printf("%i is negative\n",integer);
+  else if((integer<-100)&&(integer>=-999))
+    printf("%i is very negative\n",integer);
+  else
+    printf("%i is highly negative\n",integer);
   
   return 0;
 }
